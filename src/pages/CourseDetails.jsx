@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaImage } from "react-icons/fa";
-import WhatsAppButton from "../components/WhatsAppButton";
+import WhatsAppButton from "../components/WhatsappButton";
 import api from "../services/api";
 export default function CourseDetails() {
   const { id } = useParams();
