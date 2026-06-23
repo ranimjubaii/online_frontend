@@ -5,7 +5,7 @@ import {
   FaBookOpen,
   FaDollarSign
 } from "react-icons/fa";
-import WhatsAppButton from "./WhatsAppButton";
+import WhatsAppButton from "./WhatsappButton";
 export default function CourseCard({ course }) {
   const imageFile =
     course.image ||
