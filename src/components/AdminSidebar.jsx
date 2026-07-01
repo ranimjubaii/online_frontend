@@ -1,7 +1,16 @@
+import { useEffect } from "react";
 import { FaBars,FaTachometerAlt,FaBook,FaUsers,FaClipboardList,FaFolderOpen,FaSignOutAlt, } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 export default function AdminSidebar({sidebarOpen, toggleSidebar,}) {
    const navigate = useNavigate();
+
+   useEffect(() => {
+     document.body.classList.add("has-admin-sidebar");
+     return () => {
+       document.body.classList.remove("has-admin-sidebar");
+     };
+   }, []);
+
    const navigationLinks = [
     {
       to: "/admin",
@@ -294,9 +303,8 @@ export default function AdminSidebar({sidebarOpen, toggleSidebar,}) {
         }
 
         @media (max-width: 767px) {
-          .bg-light.min-vh-100 > *:nth-child(2) {
-            padding-top: 64px !important;
-            box-sizing: border-box;
+          body.has-admin-sidebar {
+            padding-top: 64px;
           }
         }
 
