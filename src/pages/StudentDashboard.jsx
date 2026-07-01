@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { API_BASE_URL } from '../../config';
 import { 
   FaBookOpen, 
   FaClock, 
@@ -124,7 +125,7 @@ export default function StudentDashboard() {
                     <div className="position-relative" style={{ height: "200px", backgroundColor: "#e9ecef" }}>
                       {imageName ? (
                         <img
-                          src={`http://localhost:5000/uploads/${imageName}`}
+                          src={`${API_BASE_URL}/uploads/${imageName}`}
                           alt={course.title || course.course_name}
                           className="w-100 h-100"
                           style={{ objectFit: "cover" }}

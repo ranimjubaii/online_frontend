@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { API_BASE_URL } from '../../config';
 import {
   useNavigate,
   useParams
@@ -94,7 +94,7 @@ export default function EditCourse() {
 
       if (course.image) {
         setPreviewImage(
-          `http://localhost:5000/uploads/${course.image}`
+          `${API_BASE_URL}/uploads/${course.image}`
         );
       }
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../services/api";
-
+import { API_BASE_URL } from '../../config';
 export default function MyCourses() {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -47,7 +47,7 @@ export default function MyCourses() {
                     <div className="position-relative" style={{ height: "220px", backgroundColor: "#f8f9fa" }}>
                       {courseImageFile ? (
                         <img
-                          src={`http://localhost:5000/uploads/${courseImageFile}`}
+                          src={`${API_BASE_URL}/uploads/${courseImageFile}`}
                           alt={course.title || course.course_name}
                           className="w-100 h-100"
                           style={{ objectFit: "cover" }}

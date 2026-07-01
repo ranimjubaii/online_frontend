@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from '../../config';
 import { Link } from "react-router-dom";
 import {
   FaClock,
@@ -85,7 +86,7 @@ export default function CourseCard({ course }) {
               src={
                 imageFile.startsWith("http")
                   ? imageFile
-                  : `http://localhost:5000/uploads/${imageFile}`
+                  : `${API_BASE_URL}/uploads/${imageFile}`
               }
               alt={course.course_name}
               className="w-100 h-100"

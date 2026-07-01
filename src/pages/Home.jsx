@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CourseCard from "../components/CourseCard";
+import { API_BASE_URL } from '../../config';
 import api from "../services/api";
 export default function Home() {
   const [courses, setCourses] = useState([]);
@@ -50,7 +51,7 @@ export default function Home() {
             <div className="col-lg-6 text-center d-none d-lg-block">
               <div className="position-relative rounded-4 overflow-hidden shadow-lg border border-white border-opacity-10" style={{ height: '450px', backgroundColor: "rgba(0,0,0,0.15)" }}>
                 <img
-                  src="http://localhost:5000/uploads/platformm.jpg"
+                  src="${API_BASE_URL}/uploads/platformm.jpg"
                   alt="Online Courses"
                   className="w-100 h-100"
                   style={{ objectFit: 'cover' }}

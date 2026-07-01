@@ -1,3 +1,4 @@
+import { API_BASE_URL } from '../../config';
 import React, {
   useEffect,
   useState
@@ -226,7 +227,7 @@ export default function ManageCourses() {
                               >
                                 {imageFile ? (
                                   <img
-                                    src={`http://localhost:5000/uploads/${imageFile}`}
+                                    src={`${API_BASE_URL}/uploads/${imageFile}`}
                                     alt={
                                       course.course_name
                                     }

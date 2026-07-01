@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { API_BASE_URL } from '../../config';
 import { useParams } from "react-router-dom";
 import { FaImage } from "react-icons/fa";
 import WhatsAppButton from "../components/WhatsappButton";
@@ -52,7 +53,7 @@ export default function CourseDetails() {
             <div className="position-relative rounded-4 overflow-hidden shadow bg-white" style={{ minHeight: "350px" }}>
               {course.image ? (
                 <img
-                  src={`http://localhost:5000/uploads/${course.image}`}
+                  src={`${API_BASE_URL}/uploads/${course.image}`}
                   alt={course.title}
                   className="w-100 h-100"
                   style={{ maxHeight: "450px", objectFit: "cover" }}
