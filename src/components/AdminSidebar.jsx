@@ -41,9 +41,9 @@ export default function AdminSidebar({sidebarOpen, toggleSidebar,}) {
     navigate("/login");
   };
  return ( <> {!sidebarOpen && ( 
-   <div className="position-fixed top-50 start-0 translate-middle-y"style={{  zIndex: 3000,}}>
-        <button onClick={toggleSidebar} className=" btn border-0 shadow-lg d-flex align-items-center justify-content-center rounded-0 rounded-end-4"
-            style={{ width: "58px", height: "72px", background:"linear-gradient(180deg, #58111A 0%, #2b070c 100%)", color: "#fff", transition: "all 0.25s ease",}}>
+   <div className="position-fixed top-0 start-0" style={{ zIndex: 3000, padding: "14px" }}>
+        <button onClick={toggleSidebar} className=" btn border-0 shadow-lg d-flex align-items-center justify-content-center rounded-3"
+            style={{ width: "46px", height: "46px", background:"linear-gradient(180deg, #58111A 0%, #2b070c 100%)", color: "#fff", transition: "all 0.25s ease",}}>
             <FaBars size={18} />
           </button>
         </div>
