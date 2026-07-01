@@ -293,6 +293,13 @@ export default function AdminSidebar({sidebarOpen, toggleSidebar,}) {
           transform: translateX(4px);
         }
 
+        @media (max-width: 767px) {
+          .bg-light.min-vh-100 > *:nth-child(2) {
+            padding-top: 64px !important;
+            box-sizing: border-box;
+          }
+        }
+
       `}</style>
     </>
   );
