@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CourseCard from "../components/CourseCard";
-import { API_BASE_URL } from '../../config';
+import { API_BASE_URL } from '../config';
 import api from "../services/api";
 export default function Home() {
   const [courses, setCourses] = useState([]);

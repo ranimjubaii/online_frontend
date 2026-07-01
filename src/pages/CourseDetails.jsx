@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API_BASE_URL } from '../../config';
+import { API_BASE_URL } from '../config';
 import { useParams } from "react-router-dom";
 import { FaImage } from "react-icons/fa";
 import WhatsAppButton from "../components/WhatsappButton";
